@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <ASM_Modulename>
+            <version>0.1.0</version>
+        </ASM_Modulename>
+    </modules>
+	  
+    <frontend>
+        <events>
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <modulename_observer>
+                        <class>ASM_Modulename_Model_Observer</class>
+                        <method>beforeLoadLayout</method>
+                    </modulename_observer>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+        </events>    
+    </frontend>   
+    
+    <global>
+        <helpers>
+            <modulename>
+                <class>ASM_Modulename_Helper</class>
+            </modulename>
+        </helpers>   
+
+        <models>
+            <modulename>
+                <class>ASM_Modulename_Model</class>
+                <resourceModel>modulename_mysql4</resourceModel>
+            </modulename>
+        </models>
+        
+        <resources>
+            <modulename_setup>
+                <setup>
+                    <module>ASM_Modulename</module>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </modulename_setup>
+            <modulename__write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </modulename__write>
+            <modulename__read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </modulename__read>
+        </resources>
+        
+    </global> 
+      
+    
+</config> 

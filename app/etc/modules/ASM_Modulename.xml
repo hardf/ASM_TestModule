@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+   <ASM_Modulename>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>0.1.0</version>
+   </ASM_Modulename>
+</modules>
+</config>
